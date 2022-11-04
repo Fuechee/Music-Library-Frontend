@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import DisplayMusic from "./Components/DisplayMusic/DisplayMusic";
+import SearchBar from "./Components/SearchBar/SearchBar";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -20,6 +21,7 @@ function App() {
   return (
     <div>
       <h1>Music Library</h1>
+      <SearchBar songs={songs} setSongs={setSongs}/>
       <DisplayMusic songs={songs} getAllSongs={getAllSongs}/>
     </div>
   );
