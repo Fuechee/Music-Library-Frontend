@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddButton.css";
 
 const AddButton = (props) => {
 
@@ -22,17 +23,17 @@ const AddButton = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <label>Album</label>
+            <label>Album:</label>
             <input type="text" value={album} onChange={(event) => setAlbum(event.target.value)}/>
-            <label>Artist</label>
+            <label>Artist:</label>
             <input type="text" value={artist} onChange={(event) => setArtist(event.target.value)}/>
-            <label>Genre</label>
+            <label>Genre:</label>
             <input type="text" value={genre} onChange={(event) => setGenre(event.target.value)}/>
-            <label>Release Date</label>
+            <label>Release Date:</label>
             <input type="text" value={release_date} onChange={(event) => setRelease_date(event.target.value)}/>
-            <label>Title</label>
+            <label>Title:</label>
             <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
-            <button type="submit">Add</button>
+            <button type="submit" className="btn btn-primary">Add</button>
         </form>
      );
 }

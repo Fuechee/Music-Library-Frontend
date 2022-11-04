@@ -3,6 +3,7 @@ import axios from "axios";
 import DisplayMusic from "./Components/DisplayMusic/DisplayMusic";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import AddButton from "./Components/Buttons/AddButton";
+import "./App.css";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -28,12 +29,22 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Music Library</h1>
-      <SearchBar songs={songs} setSongs={setSongs}/>
-      <DisplayMusic songs={songs} getAllSongs={getAllSongs}/>
-      <h1>Add a Song</h1>
-      <AddButton createSong={createSong}/>
+    <div className="container-fluid">
+      <div className="row">
+        <h1 style={{margin: '1em'}}>Music Library</h1>
+        <div className='col-md-6'>
+          <div className="border-box">
+            <SearchBar songs={songs} setSongs={setSongs}/>
+          </div>
+          <div className="border-box">
+            <DisplayMusic songs={songs} getAllSongs={getAllSongs}/>
+          </div>
+          <div className="border-box">
+            <h2>Add a Song</h2>
+            <AddButton createSong={createSong}/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

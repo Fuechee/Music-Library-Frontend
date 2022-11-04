@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const DisplayMusic = (props) => {
     return ( 
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>Album</th>
@@ -12,7 +13,7 @@ const DisplayMusic = (props) => {
                     <th>Title</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="table-hover">
                 {props.songs.map((song, index)=>{
                     return(
                         <tr key={index}>

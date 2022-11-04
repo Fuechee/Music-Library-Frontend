@@ -25,9 +25,15 @@ const SearchBar = (props) => {
 
     return (
         <form onSubmit={handleChange}>
-            <h3>Search for Song</h3>
-            <input type="text" placeholder='search song' value={searchField} onChange={event => setSearchField(event.target.value)}/>
-            <button type="sumbit">Click to Search</button>
+            <h2>Search for Song</h2>
+            <div className="row">
+                <div className="col">
+                    <input type="text" className="form-control" placeholder='search song' value={searchField} onChange={event => setSearchField(event.target.value)}/>
+                </div>
+                <div className="col">
+                    <button type="sumbit" className="form-control">Click to Search</button>
+                </div>
+            </div>
         </form>
      );
 }
