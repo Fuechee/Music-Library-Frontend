@@ -21,7 +21,6 @@ const DisplayMusic = (props) => {
                             <td>{song.genre}</td>
                             <td>{song.release_date}</td>
                             <td>{song.title}</td>
-                            <button>Delete</button>
                         </tr>
                     )
                 })}
